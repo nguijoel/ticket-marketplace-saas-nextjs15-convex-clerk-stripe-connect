@@ -49,7 +49,7 @@ function Header() {
           <SignedIn>
             <div className="flex items-center gap-3">
               <Link href="/seller">
-                <button className="bg-blue-600 text-white px-3 py-1.5 text-sm rounded-lg hover:bg-blue-700 transition">
+                <button className="o-button accent">
                   Sell Tickets
                 </button>
               </Link>
