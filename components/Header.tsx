@@ -10,8 +10,15 @@ function Header() {
       <div className="flex flex-col lg:flex-row items-center gap-4 p-4">
         <div className="flex items-center justify-between w-full lg:w-auto">
           <Link href="/" className="font-bold shrink-0">
-            <Image
+            {/* <Image
               src={logo}
+              alt="logo"
+              width={100}
+              height={100}
+              className="w-24 lg:w-28"
+            />  */}
+            <Image
+              src="https://cms.ontoo.cloud/media/ue5edz4y/logo-3.png"
               alt="logo"
               width={100}
               height={100}
