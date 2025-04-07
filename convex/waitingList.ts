@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { internalMutation, mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 import { Id } from "./_generated/dataModel";
@@ -72,7 +73,7 @@ export const getQueuePosition = query({
  * Mutation to process the waiting list queue and offer tickets to next eligible users.
  * Checks current availability considering purchased tickets and active offers.
  */
-export const processQueue = mutation({
+export const processQueue:any = mutation({
   args: {
     eventId: v.id("events"),
   },

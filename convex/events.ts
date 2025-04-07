@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { query, mutation } from "./_generated/server";
 import { ConvexError, v } from "convex/values";
 import { DURATIONS, WAITING_LIST_STATUS, TICKET_STATUS } from "./constants";
@@ -63,8 +64,9 @@ export const create = mutation({
 });
 
 // Helper function to check ticket availability for an event
-export const checkAvailability = query({
+export const checkAvailability:any = query({
   args: { eventId: v.id("events") },
+
   handler: async (ctx, { eventId }) => {
     const event = await ctx.db.get(eventId);
     if (!event) throw new Error("Event not found");
