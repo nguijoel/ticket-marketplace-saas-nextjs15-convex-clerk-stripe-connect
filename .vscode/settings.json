@@ -1,0 +1,52 @@
+{
+    "deploy.reloaded": {
+        "ignore": [
+            "node_modules/**",
+            "*/node_modules/**",
+            "*/test/**",
+        ],
+        "packages": [
+          {
+                "name": "WEB",
+                "description": "The WEB",
+
+                "files": [
+                    ".next/**",
+                    "public/**",
+                    ".env",
+                    "start.js",
+                    "package.json",
+                    "web.config",
+                    "images/**",
+                    "tsconfig.json"
+                ],
+
+                "button": {
+                    "text": "WEB",
+                    "tooltip": "Click here to deploy to the target...",
+                    "targets": ["WEB"]
+                }
+            }
+        ],
+
+        "targets": [
+            {
+              "type": "ftp",
+              "name": "WEB",
+              "description": "API Live",
+              "dir": "*xpupalik-a",
+              "host": "78.159.113.48",
+              "user": "ontoo", "password": "8Erw47z^",
+              "mappings": {
+                //   "/.next/**/*": "/"
+              },
+              "deployed": [
+                  {
+                      "type": "open",
+                      "target": "https://next.pupalik.com"
+                  }
+              ]
+          }
+        ]
+    }
+}
